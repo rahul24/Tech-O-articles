@@ -6,8 +6,9 @@ This is my first post on the GitHub page. Idea is to share the knowledge with th
 {% for post in site.posts %}
 
 ## {{post.title}}
-<p>{{post.description}}</p>
-<a href=>Readmore..</a>
+<p>{{post.description}}
+<a href="{{post.url}}">Readmore..</a>
+</p>
 {% endfor %}
 
 
