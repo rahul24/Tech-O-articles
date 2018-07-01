@@ -1,36 +1,6 @@
 ## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/rahul24/articles/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/rahul24/articles/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+This is my first post on the GitHub page. Idea is to share the knowledge with the community as new technologies are getting adopted by many companies and require such skilled peoples. I’ll post the series of article which will cover the in-depth. This is open for a contribution, so whosoever would like to contribute then just raise a PR (Pull Request).  If you have any request on particular topic/technology then feel free to log under issue section. I’ll try to include in my upcoming posts.
 
 ### Support or Contact
 
