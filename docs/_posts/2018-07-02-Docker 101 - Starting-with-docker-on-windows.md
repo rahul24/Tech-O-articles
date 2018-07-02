@@ -77,7 +77,8 @@ Docker images --digest
 First, you need to create a docker hub account where all the images will be pushed.  
 Login to your account using docker CLI.
 
-```Command (Insecure)
+```
+Command (Insecure)
 Docker login –username <your docker hub username> --password <your docker hub password>
 
 Alternate Command (Secure)
