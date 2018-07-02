@@ -1,5 +1,4 @@
 ---
-
 title: Part-1 Starting with docker on windows
 date: 2018-07-02
 category: docker
