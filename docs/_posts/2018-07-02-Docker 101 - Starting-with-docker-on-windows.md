@@ -40,10 +40,11 @@ Docker info
 ![Docker Info]({{ site.baseurl }}/assets/images/01_post_docker_info.png "Docker Info")
 
 ### Build and tag your first image.
-I'll be using window server 2016 throughout the series but the commands are same on Windows 10 docker. The difference would come when we start using orchestrator - swarm mode.
+I'll be using window server 2016 throughout the series but the commands work on Windows 10 also. The difference would come when we start using orchestrator - swarm mode.
+
 First, we need to pull the base image from docker hub. The base image is built and distributed by the owner of the product. Every company has their repository on the docker hub so make sure pulling the image from the authentic repository. Check the authenticity of the repo before pulling the image as it can have a malicious program which can cause a problem.
-Pulling the aspnet core image - https://hub.docker.com/r/microsoft/aspnetcore/ 
-The aspnet core has a lot of different versions which can be pulled by specifying the version in the tag (by specifying ‘:’ at the end). If you don’t specify the version in the tag then it will automatically pull the latest based on the supported architecture of your system. All images are targeted to multi-architecture (supported by different platforms).
+
+Pulling the aspnet core image - https://hub.docker.com/r/microsoft/aspnetcore/. The aspnet core has a lot of different versions which can be pulled by specifying the version in the tag (specify ‘:’ at the end). If you don’t specify the version in the tag then it will automatically pull the latest based on the supported architecture of your system. All images are targeted to multi-platform.
 
 ```
 Command:
@@ -104,4 +105,5 @@ Docker push <your account user name>/nanoserver
  
 ![Docker Push]({{ site.baseurl }}/assets/images/01_post_docker_push.png "Docker Push")
 
-
+## Summary
+This post explain the basics of the docker. The post covered - how to pull any image from docker? and touch upon the isolation types to diffrent versions of the docker i.e. community edition, enterprise edition. 
