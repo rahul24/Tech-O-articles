@@ -52,7 +52,7 @@ docker pull microsoft/aspnetcore:2.0.8
 
 ![Docker Pull]({{ site.baseurl }}/assets/images/01_post_docker_pull.png "Docker Pull")
 
-An image is consist of many layers. Each time you add a new thing on top of the base image, It will create a new layer. Layer concept is very interesting, it adds up the reusability. If the layer already exists then docker will reuse the same layer and this removes the overhead of pulling the whole image every time.  Each layer is protected with a sha256 hash (digest) which make them authentic.
+An image is consist of many layers. Each time you add a new thing on top of the base image, It will create a new layer. Layer concept is very interesting, it adds up the reusability. If the layer already exists then docker will reuse the same layer and this removes the overhead of pulling the whole image every time.  Each layer has a sha256 hash (digest) which make them authentic.
 
 ### Create a new tag on existing image.
 
