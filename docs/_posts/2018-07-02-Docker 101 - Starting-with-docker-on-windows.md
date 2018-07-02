@@ -54,7 +54,7 @@ docker pull microsoft/aspnetcore:2.0.8
 
 An image is consist of many layers. Each time you add a new thing on top of the base image, It will create a new layer. Layer concept is very interesting, it adds up the reusability. If the layer already exists then docker will reuse the same layer and this removes the overhead of pulling the whole image every time.  Each layer has a sha256 hash (digest) which make them authentic.
 
-### Create a new tag on existing image.
+#### Create a new tag on existing image.
 
 ```
 Command:
@@ -72,3 +72,35 @@ Check the digest of the pulled images.
 Command
 Docker images --digest
 ```
+
+### Push the image to the docker hub.
+First, you need to create a docker hub account where all the images will be pushed.  
+Login to your account using docker CLI.
+
+```Command (Insecure)
+Docker login –username <your docker hub username> --password <your docker hub password>
+
+Alternate Command (Secure)
+type .\password.txt | docker login --username  <your docker hub username> --password-stdin
+```
+
+![Docker Login Secure]({{ site.baseurl }}/assets/images/01_post_docker_login_secure.png "Docker Login Secure")
+
+
+To push the image in your repository, you need to re-tag the existing image (with your account name) which we downloaded above, otherwise it will not get pushed.  
+
+```
+Command
+Docker tag microsoft/nanoserver  <your account user name>/nanoserver
+```
+
+Once the image is tagged properly. Next, push the image to the docker hub under your account.
+
+```
+Command
+Docker push <your account user name>/nanoserver
+```
+ 
+![Docker Push]({{ site.baseurl }}/assets/images/01_post_docker_push.png "Docker Push")
+
+
