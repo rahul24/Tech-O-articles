@@ -6,6 +6,8 @@ excerpt_separator: <!--more-->
 image: docker-microsoft.jpg
 ---
 
+{% include _layout/head.html %}
+
 ## Starting with Docker on windows.
 
 Docker is becoming a de-facto for DevOps model which many companies are adopting. The DevOps is a vast topic so let’s not deviate from the topic as a lot to cover under this stream. I’ll be covering the following things:
