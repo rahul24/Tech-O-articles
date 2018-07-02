@@ -13,7 +13,9 @@ Docker is becoming a de-facto for DevOps model which many companies are adopting
 *	Build and tag the first image
 *	Push the image to the docker hub.
 
+excerpt
 <!--more-->
+out-of-excerpt
 
 ### Windows Container
 Container runs strip down version of OS, underlying it is using the host kernel (Process-based Containers) for any processing. The windows container attached NAT (Network Address Translation) network and expose its hosted services. There are other network drivers which I will be explaining in upcoming posts.  There is two version of docker are available:
