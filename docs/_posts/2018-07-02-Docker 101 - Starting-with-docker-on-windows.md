@@ -4,6 +4,7 @@ title: Part-1 Starting with docker on windows
 date: 2018-07-02
 description: Docker is becoming a de-facto for DevOps model which many companies are adopting.
 category: docker
+excerpt_separator: <!--more-->
 ---
 
 
@@ -14,6 +15,9 @@ Docker is becoming a de-facto for DevOps model which many companies are adopting
 	Windows Container
 	Build and tag the first image
 	Push the image to the docker hub.
+Excerpt
+<!--more-->
+Out-of-excerpt
  
 ## Windows Container
 Container runs strip down version of OS, underlying it is using the host kernel (Process-based Containers) for any processing. The windows container attached NAT (Network Address Translation) network and expose its hosted services. There are other network drivers which I will be explaining in upcoming posts.  There is two version of docker are available:
