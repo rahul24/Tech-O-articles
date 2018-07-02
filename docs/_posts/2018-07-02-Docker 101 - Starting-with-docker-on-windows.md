@@ -16,7 +16,7 @@ Docker is becoming a de-facto for DevOps model which many companies are adopting
 	Build and tag the first image
 	Push the image to the docker hub.
 
-Excerpt
+excerpt
 <!--more-->
 Out-of-excerpt
 
