@@ -49,19 +49,19 @@ An image is consist of many layers. Each time you add a new thing on top of the 
 
 ## Create a new tag on existing image.
 
-'''
+```
 Command:
 Docker tag microsoft/aspnetcore:2.0.8 myimage
-'''
+```
 
 Check the pulled and newly tagged images
-'''
+```
 Command
 Docker images
-'''
+```
 
 Check the digest of the pulled images.
-'''
+```
 Command
 Docker images --digest
-'''
+```
