@@ -53,7 +53,7 @@ docker pull microsoft/aspnetcore:2.0.8
 
 ![Docker Pull]({{ site.baseurl }}/assets/images/01_post_docker_pull.png "Docker Pull")
 
-An image is consist of many layers. Each time you add a new thing on top of the base image, It will create a new layer. Layer concept is very interesting, it adds up the reusability. If the layer already exists then docker will reuse the same layer and this removes the overhead of pulling the whole image every time.  Each layer has a sha256 hash (digest) which make them authentic.
+An image is consist of many layers. Each time you add a new thing on top of the base image, It will create a new layer. Layer concept is very interesting, it adds up the reusability. If the layer already exists then docker will reuse the same layer and this removes the overhead of pulling the whole image each time.  Each layer has a sha256 hash (digest) which make them authentic.
 
 #### Create a new tag on existing image.
 
@@ -106,4 +106,4 @@ Docker push <your account user name>/nanoserver
 ![Docker Push]({{ site.baseurl }}/assets/images/01_post_docker_push.png "Docker Push")
 
 ### Summary
-This post explain the basics of the docker. The post covered - how to pull any image from docker? and touch upon the isolation types to diffrent versions of the docker i.e. community edition, enterprise edition. 
+This post explain the basics of the docker. The post covered - how to pull any image from docker? and touch upon the isolation types and diffrent versions of the docker i.e. community edition, enterprise edition. 
