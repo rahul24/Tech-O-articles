@@ -6,6 +6,7 @@ category: docker
 excerpt_separator: <!--more-->
 ---
 
+<meta name="description" content="{{ page.content | markdownify | strip_html | truncatewords: 50 }}">
 
 ## Starting with Docker on windows.
 
