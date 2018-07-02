@@ -105,5 +105,5 @@ Docker push <your account user name>/nanoserver
  
 ![Docker Push]({{ site.baseurl }}/assets/images/01_post_docker_push.png "Docker Push")
 
-## Summary
+### Summary
 This post explain the basics of the docker. The post covered - how to pull any image from docker? and touch upon the isolation types to diffrent versions of the docker i.e. community edition, enterprise edition. 
