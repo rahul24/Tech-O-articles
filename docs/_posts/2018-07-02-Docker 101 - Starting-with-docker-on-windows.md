@@ -7,7 +7,7 @@ excerpt_separator: <!--more-->
 ---
 
 
-#Starting with Docker on windows.
+##Starting with Docker on windows.
 
 Docker is becoming a de-facto for DevOps model which many companies are adopting. The DevOps is a vast topic so let’s not deviate from the topic as a lot to cover under this stream. I’ll be covering the following things:
 
@@ -15,11 +15,9 @@ Docker is becoming a de-facto for DevOps model which many companies are adopting
 *	Build and tag the first image
 *	Push the image to the docker hub.
 
-excerpt
 <!--more-->
-Out-of-excerpt
 
-## Windows Container
+### Windows Container
 Container runs strip down version of OS, underlying it is using the host kernel (Process-based Containers) for any processing. The windows container attached NAT (Network Address Translation) network and expose its hosted services. There are other network drivers which I will be explaining in upcoming posts.  There is two version of docker are available:
 +	Community Version 
 +	Enterprise Version
@@ -39,7 +37,7 @@ Command
 Docker info
  ```
 
-## Build and tag your first image.
+### Build and tag your first image.
 I'll be using window server 2016 throughout the series but the commands are same on Windows 10 docker. The difference would come when we start using orchestrator - swarm mode.
 First, we need to pull the base image from docker hub. The base image is built and distributed by the owner of the product. Every company has their repository on the docker hub so make sure pulling the image from the authentic repository. Check the authenticity of the repo before pulling the image as it can have a malicious program which can cause a problem.
 Pulling the aspnet core image - https://hub.docker.com/r/microsoft/aspnetcore/ 
@@ -52,7 +50,7 @@ docker pull microsoft/aspnetcore:2.0.8
 
 An image is consist of many layers. Each time you add a new thing on top of the base image, It will create a new layer. Layer concept is very interesting, it adds up the reusability. If the layer already exists then docker will reuse the same layer and this removes the overhead of pulling the whole image every time.  Each layer is protected with a sha256 hash (digest) which make them authentic.
 
-## Create a new tag on existing image.
+### Create a new tag on existing image.
 
 ```
 Command:
