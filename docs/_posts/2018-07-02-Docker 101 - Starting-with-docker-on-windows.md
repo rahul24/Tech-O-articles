@@ -1,7 +1,7 @@
 ---
 title: Part-1 Starting with docker on windows
 date: 2018-07-02
-description: Docker is becoming a de-facto for DevOps model which many companies are adopting.
+description: {{ page.content | markdownify | strip_html | truncatewords: 50 }}
 category: docker
 excerpt_separator: <!--more-->
 ---
