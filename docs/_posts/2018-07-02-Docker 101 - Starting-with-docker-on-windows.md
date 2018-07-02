@@ -11,9 +11,9 @@ excerpt_separator: <!--more-->
 
 Docker is becoming a de-facto for DevOps model which many companies are adopting. The DevOps is a vast topic so let’s not deviate from the topic as a lot to cover under this stream. I’ll be covering the following things:
 
-	Windows Container
-	Build and tag the first image
-	Push the image to the docker hub.
+*	Windows Container
+*	Build and tag the first image
+*	Push the image to the docker hub.
 
 excerpt
 <!--more-->
@@ -21,12 +21,12 @@ Out-of-excerpt
 
 ## Windows Container
 Container runs strip down version of OS, underlying it is using the host kernel (Process-based Containers) for any processing. The windows container attached NAT (Network Address Translation) network and expose its hosted services. There are other network drivers which I will be explaining in upcoming posts.  There is two version of docker are available:
-a.	Community Version 
-b.	Enterprise Version
++	Community Version 
++	Enterprise Version
 
 Community version (CE) install on windows 10 which is for a development not to run production workload. The container you would be spinning on windows 10 is using hyper-v isolation. There is two type of isolation:
-a.	Hyper-V based
-b.	Process-based
++	Hyper-V based
++	Process-based
 Hyper-V isolation separates the container from the host. The containers running inside the hyper-v cannot access the host kernel. In hyper-v isolation, a slim version of VM gets spin up under the hood which has its own kernel and cgoups.  
 Process-based isolation is enabled by default on window 2016 or later OS. The containers can access the resources of hosts i.e. kernel, cgroups. 
 
@@ -48,13 +48,20 @@ docker pull microsoft/aspnetcore:2.0.8
 An image is consist of many layers. Each time you add a new thing on top of the base image, It will create a new layer. Layer concept is very interesting, it adds up the reusability. If the layer already exists then docker will reuse the same layer and this removes the overhead of pulling the whole image every time.  Each layer is protected with a sha256 hash (digest) which make them authentic.
 
 ## Create a new tag on existing image.
+
+'''
 Command:
 Docker tag microsoft/aspnetcore:2.0.8 myimage
+'''
 
 Check the pulled and newly tagged images
+'''
 Command
 Docker images
+'''
 
 Check the digest of the pulled images.
+'''
 Command
 Docker images --digest
+'''
