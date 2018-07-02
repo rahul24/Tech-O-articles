@@ -61,7 +61,7 @@ Command:
 Docker tag microsoft/aspnetcore:2.0.8 myimage
 ```
 
-Check the pulled and newly tagged images
+Check all the downloaded and tagged images
 ```
 Command
 Docker images
