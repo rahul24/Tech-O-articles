@@ -22,14 +22,15 @@ Container runs strip down version of OS, underlying it is using the host kernel 
 +	Community Version 
 +	Enterprise Version
 
-Community version (CE) install on windows 10 which is for a development not to run production workload. The container you would be spinning on windows 10 is using hyper-v isolation. There is two type of isolation:
+>Community version (CE) install on windows 10 which is for a development not to run production workload. The container you would be spinning on windows 10 is using hyper-v isolation. There is two type of isolation:
 +	Hyper-V based
 +	Process-based
 
-Hyper-V isolation separates the container from the host. The containers running inside the hyper-v cannot access the host kernel. In hyper-v isolation, a slim version of VM gets spin up under the hood which has its own kernel and cgoups.  
-Process-based isolation is enabled by default on window 2016 or later OS. The containers can access the resources of hosts i.e. kernel, cgroups. 
+>>Hyper-V isolation separates the container from the host. The containers running inside the hyper-v cannot access the host kernel. In hyper-v isolation, a slim version of VM gets spin up under the hood which has its own kernel and cgoups.  
 
-Enterprise version (EE) install on window 2016 or later OS. In this version, you can use the swarm mode which is a docker orchestrator. To install enterprise version on windows 2016 or later OS then you need to update the machine to the latest and enable container from windows feature. I’ll write a sperate post with all the detail steps.
+>>Process-based isolation is enabled by default on window 2016 or later OS. The containers can access the resources of host i.e. kernel, cgroups. 
+
+>Enterprise version (EE) install on window 2016 or later OS. In this version, you can use the swarm mode which is a docker orchestrator. To install enterprise version on windows 2016 or later OS then you need to update the machine to the latest and enable container from windows feature. I’ll write a sperate post with all the detail steps.
 
 Check which version running on your machine:
 ```
