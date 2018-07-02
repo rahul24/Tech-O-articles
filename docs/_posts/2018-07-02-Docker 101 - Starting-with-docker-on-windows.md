@@ -6,7 +6,7 @@ excerpt_separator: <!--more-->
 image: docker-microsoft.jpg
 ---
 
-{% include _layout/head.html %}
+{% include {{ site.baseurl }}/_layout/head.html %}
 
 ## Starting with Docker on windows.
 
