@@ -3,6 +3,7 @@ title: Part-1 Starting with docker on windows
 date: 2018-07-02
 category: docker
 excerpt_separator: <!--more-->
+image: docker-microsoft.jpg
 ---
 
 ## Starting with Docker on windows.
