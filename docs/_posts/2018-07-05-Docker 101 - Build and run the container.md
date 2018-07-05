@@ -20,9 +20,9 @@ excerpt
 out-of-excerpt
 
 ### Build your first docker image
-The image is built using “Dockerfile”. A “Dockerfile” is just a regular file which is understood by docker engine and process based on the instructions specified in the file. The “Dockerfile” has a series of instructions which is send to the docker engine for processing and as an outcome, this would generate a custom image for us. Think of the image as a template, which is used to spin the containers.
+The image is built using “Dockerfile”. A “Dockerfile” is just a regular file which is understood by docker engine and process based on the instructions specified in the file. The “Dockerfile” has a series of instructions which is send to the docker engine for processing and as an outcome, this would generate a custom image for us. Think of the image as a template which is used to spin the containers.
 
-The following commands are used with docker file:
+The following commands are used with the docker file:
 
 +	FROM: To pull the base image from docker hub.
 +	RUN: Execute any command. This is used to do any customization i.e. pulling any framework from the web and install or run any in-build command. You can specify the PowerShell commands. This will create a new layer and execute at build time
@@ -39,7 +39,7 @@ The following commands are used with docker file:
 +	LABEL: Bake the custom label in the image metadata. This is used to a apply the filter i.e. placement of certain types of containers like OS. 
 
 
-There are different variations of the commands which you can refer from https://docs.docker.com/engine/reference/builder/ 
+There are different variations of the commands which you can refer from <a href="https://docs.docker.com/engine/reference/builder/">https://docs.docker.com/engine/reference/builder/</a>
 
 Let's create the "DockerFile".
 
