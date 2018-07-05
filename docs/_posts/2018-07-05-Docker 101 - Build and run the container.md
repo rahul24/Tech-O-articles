@@ -1,7 +1,7 @@
 ---
 title: Part-2 Build and run the container
 date: 2018-07-05
-category: [docker, windows container]
+category: docker
 excerpt_separator: <!--more-->
 image: docker-microsoft.jpg
 ---
