@@ -202,7 +202,7 @@ The container can be directly run using “Docker run” command. Some of the im
 > * -t: TTY session.
 
 
-+ Running container in a demon mode (-d option).
++ Running container in a daemon mode (-d option).
 
 ```
 Command
@@ -220,3 +220,8 @@ Docker run -it  -p 80:80 –name setout <image name>
 ```
 
  ![Docker Container Run Interactive Mode]({{ site.baseurl }}/assets/images/02_docker_run_output.png "Docker Container Run Interactive Mode") 
+
+ ### Summary
+This post explains, how to build an image using the docker file. Learn about the commands use with docker file and collectively create a custom image. Learn about running the image and states of container.
+
+
