@@ -60,7 +60,7 @@ Now, will write the Dockerfile with commands which we learned above. As I specif
 Command
 FROM microsoft/aspnetcore:2.1-aspnetcore-runtime
 ```
-This will pull the image from the docker hub. Here we are pulling the specfic image which has Tag “2.1-aspnetcore-runtime”. If the image does not exist locally then this will from docker hub.
+This will pull the image from the docker hub. Here we are pulling the specfic image which has Tag “2.1-aspnetcore-runtime”. If the image does not exist locally then gets pulled from docker hub.
 
 
 ```
@@ -95,7 +95,7 @@ Command
 ENTRYPOINT ["dotnet","Docker.Tryout.dll"]
 ```
 
-This will set the entry point of the program. Since this is a dot-net core app so specifying “Dotnet” with parameter – “Assembly Name (Docker.Tryout.dll)” which has the main method. 
+This will set the entry point of the program. Since this is a dot-net core app therefore using “Dotnet” shell with parameter – “Assembly Name (Docker.Tryout.dll)” which has a main method. 
 
 
 
