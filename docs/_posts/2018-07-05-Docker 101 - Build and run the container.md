@@ -9,7 +9,7 @@ image: docker-microsoft.jpg
 
 ## Part 2: Build and run the container
 
-As we learned basics of the docker and some of the useful commands in my [previous post](https://rahul24.github.io/Tech-O-articles/docker/2018/07/02/Docker-101-Starting-with-docker-on-windows.html) so we would be using all those commands throughout the series. This is a continuation of my [last post](https://rahul24.github.io/Tech-O-articles/docker/2018/07/02/Docker-101-Starting-with-docker-on-windows.html), we’ll cover the below topics:
+As we learned basics of the docker and some of the useful commands in my [previous post](https://rahul24.github.io/Tech-O-articles/docker/2018/07/02/Docker-101-Starting-with-docker-on-windows.html) that, we would be using throughout the series. In a continuation of my [last post](https://rahul24.github.io/Tech-O-articles/docker/2018/07/02/Docker-101-Starting-with-docker-on-windows.html), we’ll cover the below topics:
 
 *	Build your first docker image
 *	Container lifecycle
