@@ -8,8 +8,7 @@ image: docker-microsoft.jpg
 
 
 ## Part 2: Build and run the container
-
-As we learned basics of the docker and some of the useful commands in my [previous post](https://rahul24.github.io/Tech-O-articles/docker/2018/07/02/Docker-101-Starting-with-docker-on-windows.html) that, we would be using throughout the series. In a continuation of my [last post](https://rahul24.github.io/Tech-O-articles/docker/2018/07/02/Docker-101-Starting-with-docker-on-windows.html), we’ll cover the below topics:
+In my [previous post](https://rahul24.github.io/Tech-O-articles/docker/2018/07/02/Docker-101-Starting-with-docker-on-windows.html), we learned basics of the docker and some of the useful commands that we would be using throughout the series. In a continuation of my [last post](https://rahul24.github.io/Tech-O-articles/docker/2018/07/02/Docker-101-Starting-with-docker-on-windows.html), we’ll cover the below topics:
 
 *	Build your first docker image
 *	Container lifecycle
@@ -29,7 +28,7 @@ The following commands are used with the docker file:
 +	CMD: Execute any executable with a parameter. The parameters are passed in a JSON format. This  will not execute at build time but when container start. 
 +	EXPOSE: This will expose the container network port at runtime. The port can be exposed either on tcp or udp.
 +	ENV: To set the environment variable.
-+	ADD: copy files/folders/remote files to the container. This is will create a new layer.
++	ADD: copy files/folders/remote files to the container. This will create a new layer.
 +	COPY: copy files/folder to the container.
 +	ENTRTPOINT: Set an entry point of the program, you wish to run inside the container.
 +	VOLUME: Use to mount the host disk in the container.
@@ -80,7 +79,7 @@ Command
 EXPOSE 80/tcp
 ```
 
-Exposing the container network port on tcp channel at runtime. This will channelize the inbound/outbound host requests.
+Expose the container port on tcp channel at runtime. This will channelize the inbound/outbound host requests.
 
 ```
 Command
