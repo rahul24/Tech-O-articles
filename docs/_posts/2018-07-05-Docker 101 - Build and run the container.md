@@ -129,7 +129,7 @@ I’ve marked (highlighted by yellow) the specific things on the above image (ou
 
 
 ### Container lifecycle
-The container is like a virtual machine when comparing by states, it could start, stop, delete. Unlike virtual machines, the container doesn’t persist data inside. If you wish to persist the data then need to mount the volume of the host to do the same. Some of the commands which change the state of the container.
+The container is like a virtual machine when comparing by states, it could start, stop, delete. Unlike virtual machines, the container doesn’t persist data inside. If you wish to persist the data then need to mount the volume of the host to do the same. Some of the commands which change the state of the container are:
 
 + “Docker create” command creates a container but won’t run. Specify the –name parameter, which will create an alias on the container. This is help to refer the container by its name. 
 
@@ -161,9 +161,9 @@ Docker rename <container name/id> <new name>
 
 ![Docker Container Rename]({{ site.baseurl }}/assets/images/02_docker_rename.png "Docker Container Rename") 
 
-#### Container State Lifecycle
+#### Container States
 
-Images are immutable once it gets created then can’t make any changes in them. Think of the image as a class and containers as objects. You can create N number of containers using the same image. The container cannot hold the data forever once it gets destroyed all the data will also destroy with the container. If the data needs to be persist permanently then the external volume needs to be mount. Some of the important states of the container lifecycle are:
+Images are immutable once it gets created then can’t make any changes in them. Think of the image as a class and containers as objects. You can create <b>N</b> number of containers using the same image. The container cannot hold the data forever once it gets destroyed all the data will also destroy with the container. If the data needs to be persist permanently then the external volume needs to be mount. Some of the important states of the container lifecycle are:
 
 + "Container Start" - This command will start the container.
 
@@ -195,11 +195,11 @@ Spinning a new container is so simple and take just a few seconds. Unlike virtua
 
 The container can be directly run using “Docker run” command. Some of the important arguments of this command are:
 
---name: Assign the name to the container
--p: Map the host port with container port for traffic to flow.
--d: demon mode (background)
--i: Interactive mode
--t: TTY session 
+>--name: Assign the name to the container
+>-p: Map the host port with container port for traffic to flow.
+>-d: demon mode (background)
+>-i: Interactive mode
+>-t: TTY session 
 
 
 + Running container in a demon mode (-d option).
