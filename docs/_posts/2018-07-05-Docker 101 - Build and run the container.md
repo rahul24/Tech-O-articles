@@ -129,7 +129,7 @@ I’ve marked (highlighted by yellow) the specific things on the above image (ou
 
 
 ### Container lifecycle
-The container is like a virtual machine when comparing by states, it could start, stop, delete. Unlike virtual machines, the container doesn’t persist data inside. If you wish to persist the data then need to mount the volume of the host to do the same. Som of the commands which helps for state transition.
+The container is like a virtual machine when comparing by states, it could start, stop, delete. Unlike virtual machines, the container doesn’t persist data inside. If you wish to persist the data then need to mount the volume of the host to do the same. Some of the commands which change the state of the container.
 
 + “Docker create” command creates a container but won’t run. Specify the –name parameter, which will create an alias on the container. This is help to refer the container by its name. 
 
