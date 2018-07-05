@@ -195,11 +195,15 @@ Spinning a new container is so simple and take just a few seconds. Unlike virtua
 
 The container can be directly run using “Docker run” command. Some of the important arguments of this command are:
 
->--name: Assign the name to the container
+>--name: Assign the name to the container.
+
 >-p: Map the host port with container port for traffic to flow.
->-d: demon mode (background)
->-i: Interactive mode
->-t: TTY session 
+
+>-d: demon mode (background).
+
+>-i: Interactive mode.
+
+>-t: TTY session .
 
 
 + Running container in a demon mode (-d option).
