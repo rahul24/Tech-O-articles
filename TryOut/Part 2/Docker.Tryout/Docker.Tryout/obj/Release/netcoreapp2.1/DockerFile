@@ -1,0 +1,11 @@
+From microsoft/aspnetcore:latest
+
+WORKDIR /app
+
+ADD . /app
+
+EXPOSE 80/tcp
+
+ENV ASPNETCORE_URLS http://*:80
+
+ENTRYPOINT ["dotnet","AgreementService.dll"]

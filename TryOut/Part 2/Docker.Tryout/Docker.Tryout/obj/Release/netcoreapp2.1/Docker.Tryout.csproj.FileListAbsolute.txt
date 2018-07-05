@@ -1,0 +1,14 @@
+D:\github\Source\Repos\Tech-O-articles\TryOut\Part 2\Docker.Tryout\Docker.Tryout\bin\Release\netcoreapp2.1\Docker.Tryout.deps.json
+D:\github\Source\Repos\Tech-O-articles\TryOut\Part 2\Docker.Tryout\Docker.Tryout\bin\Release\netcoreapp2.1\Docker.Tryout.runtimeconfig.json
+D:\github\Source\Repos\Tech-O-articles\TryOut\Part 2\Docker.Tryout\Docker.Tryout\bin\Release\netcoreapp2.1\Docker.Tryout.runtimeconfig.dev.json
+D:\github\Source\Repos\Tech-O-articles\TryOut\Part 2\Docker.Tryout\Docker.Tryout\bin\Release\netcoreapp2.1\Docker.Tryout.dll
+D:\github\Source\Repos\Tech-O-articles\TryOut\Part 2\Docker.Tryout\Docker.Tryout\bin\Release\netcoreapp2.1\Docker.Tryout.pdb
+D:\github\Source\Repos\Tech-O-articles\TryOut\Part 2\Docker.Tryout\Docker.Tryout\obj\Release\netcoreapp2.1\Docker.Tryout.csprojResolveAssemblyReference.cache
+D:\github\Source\Repos\Tech-O-articles\TryOut\Part 2\Docker.Tryout\Docker.Tryout\obj\Release\netcoreapp2.1\Docker.Tryout.csproj.CoreCompileInputs.cache
+D:\github\Source\Repos\Tech-O-articles\TryOut\Part 2\Docker.Tryout\Docker.Tryout\obj\Release\netcoreapp2.1\Docker.Tryout.RazorAssemblyInfo.cache
+D:\github\Source\Repos\Tech-O-articles\TryOut\Part 2\Docker.Tryout\Docker.Tryout\obj\Release\netcoreapp2.1\Docker.Tryout.RazorAssemblyInfo.cs
+D:\github\Source\Repos\Tech-O-articles\TryOut\Part 2\Docker.Tryout\Docker.Tryout\obj\Release\netcoreapp2.1\Docker.Tryout.AssemblyInfoInputs.cache
+D:\github\Source\Repos\Tech-O-articles\TryOut\Part 2\Docker.Tryout\Docker.Tryout\obj\Release\netcoreapp2.1\Docker.Tryout.AssemblyInfo.cs
+D:\github\Source\Repos\Tech-O-articles\TryOut\Part 2\Docker.Tryout\Docker.Tryout\obj\Release\netcoreapp2.1\Docker.Tryout.RazorTargetAssemblyInfo.cache
+D:\github\Source\Repos\Tech-O-articles\TryOut\Part 2\Docker.Tryout\Docker.Tryout\obj\Release\netcoreapp2.1\Docker.Tryout.dll
+D:\github\Source\Repos\Tech-O-articles\TryOut\Part 2\Docker.Tryout\Docker.Tryout\obj\Release\netcoreapp2.1\Docker.Tryout.pdb

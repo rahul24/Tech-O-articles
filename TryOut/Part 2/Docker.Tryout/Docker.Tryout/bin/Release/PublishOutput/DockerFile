@@ -1,0 +1,11 @@
+From microsoft/dotnet:2.1-aspnetcore-runtime
+
+WORKDIR /app
+
+ADD . /app
+
+EXPOSE 80/tcp
+
+ENV ASPNETCORE_URLS http://*:80
+
+ENTRYPOINT ["dotnet","docker.tryout.dll"]
