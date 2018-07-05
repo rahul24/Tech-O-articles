@@ -222,6 +222,6 @@ Docker run -it  -p 80:80 –name setout <image name>
 ![Docker Run Interactive Mode]({{ site.baseurl }}/assets/images/02_docker_run_output.png "Docker Run Interactive Mode") 
 
 ### Summary
-This post explains, how to build an image using the docker file. Learn about the commands, use with docker file and put together all and create a custom image. Learn about running the image and states of container.
+This post explains, how to build an image using the docker file. Learn about the commands, use commands in docker file and put together all to create a custom image. This also explains, how to spin the containers and manage them.
 
 
