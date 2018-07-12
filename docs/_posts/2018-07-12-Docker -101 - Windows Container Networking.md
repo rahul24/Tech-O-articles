@@ -14,17 +14,17 @@ Links to the previous posts:
 > * [Part 2: Build and run the container.](https://rahul24.github.io/Tech-O-articles/docker/2018/07/05/Docker-101-Build-and-run-the-container.html)
 
 
-This is a first part of the networking series more would come out soon. Networking is a vast topic, so will touch upon the topics which are necessary for the containers. The communication is an important channel, and it’s a crux for any system. Effective communication is a base for any robust system. Therefore, containers hugely depend on the network for communication. We’ll cover the networking concepts applicable to windows. Microsoft is pushing lots of improvements in the network stack to increase the compatibility with docker, but still, it has a lot to achieve. Microsoft has launched two channels through which they’re pushing the improvement out for experimentation. You can read more about same from [here](https://docs.microsoft.com/en-us/windows-server/get-started/get-started-with-1803).  
+This is a first part of the networking series more would come out soon. Networking is a vast topic, so will touch upon the topics which are necessary for the containers. The communication is an important channel, and it’s a crux for any system. Effective communication is a base for any robust system. Therefore, containers hugely depend on the network for communication. We’ll cover the networking concepts applicable to windows. Microsoft is pushing lots of improvements in the network stack to increase the compatibility with docker, but still, it has a lot to achieve. Microsoft has launched two channels through which they’re pushing the improvement out for experimentation. You can read more about the same from [here](https://docs.microsoft.com/en-us/windows-server/get-started/get-started-with-1803).  
 
-Currently, they’ve launched two versions of window server 1709 and 1803 which has improved, i.e. support for ingress routing for a swarm (will write more in upcoming posts).
+Currently, they’ve launched two versions of window server 1709 and 1803 which has improved, i.e., support for ingress routing for a swarm (will write more in upcoming posts).
 excerpt
 <!--more-->
 out-of-excerpt
 
-The most basic question which I always got in discussions is:
+The question which I get mostly in discussions is:
 
 ### How the docker works on windows?
-In Windows, Docker CLI uses docker engine rest api to perform the tasks ,i.e. creating a new container/network. Docker engine internally calls containerd and runc component of docker to do the low level tasks which require interaction with kernel, Cgroups. In linux, this intraction is direct from containerd to kernel and cgroups but this has been abstract out on windows. Since, window is new in this game and frequent changes are required to stabalize and increases the compatability with docker. Therefore,windows team, added a layer of abstraction (Service) on top of low level compeoents ,i.e. kernel, cgroups. This service is calles HCS (Host Compute Service) and HNS (Host Network Service) which do all the low level work.
+In Windows, Docker CLI uses docker engine rest API to perform the tasks, i.e., creating a new container/network. Docker engine internally calls containerd and runc component of docker to do the low-level tasks which require interaction with the kernel, Cgroups. In Linux, this interaction is direct from containerd to kernel and cgroups, but this has been abstract out on windows. Since the window is new in this game, therefore, frequent changes are required to stabilize and increase the compatibility with docker. The windows team added a layer of abstraction (Service) on top of low-level components, i.e., kernel, cgroups. This service is called HCS (Host Compute Service) and HNS (Host Network Service) which do all the low-level work.
 
 ![Window Arch - source: microsoft.com]({{ site.baseurl }}/assets/images/03_Windows-Arch2.png "Window Arch - source: microsoft.com")
 
@@ -32,7 +32,7 @@ In Windows, Docker CLI uses docker engine rest api to perform the tasks ,i.e. cr
 Let's jump into the core of the networking and understand more about it!!!
 
 ### How the container interact with each other?
-Containers are depended on WNV (windows network virtualization). The WNV is vastly used with VM’s and developed to cater the needs of VM’s. Same concepts are applied on containers as both are moreover similar to each other excepts containers doesn’t have it's own kernel and depend on hosts. 
+Containers are depended on WNV (windows network virtualization). The WNV is vastly used with VM’s and developed to cater the needs of VM’s. Same concepts are applied on containers as both are moreover similar to each other excepts containers doesn’t have its kernel and depend on hosts. 
 
 Another question which is pin-up in everybody’s mind is – 
 
@@ -57,11 +57,11 @@ Command
 Ipconfig /allcompartments
 ```
 
-The data is transferred within windows in a form of particular packets called NBL (Net Buffer List). The NBL packets are transferred by containers which get routed and received by another container NIC. The virtual network uses NBL packets to transfer the data internally which gets routed via a switch. To capture the container traffic (NBL packets) then follow the steps:
+The data move in the form of particular packets called NBL (Net Buffer List) within the system. The NBL packets are transferred by containers which get routed and received by another container NIC. The virtual network uses NBL packets to move the data internally which gets routed via a switch. To capture the container traffic (NBL packets) then follow the steps:
 
 
 + Create a new session to capture the container traffic.
-Capture a session in ETL file and assiging the dynamic name to the file.
+Capture a session in ETL file and assigning the dynamic name to the file.
 
 ```
 PS C:\> $timestamp = Get-Date -f yyyy-MM-dd_HH-mm-ss
@@ -117,7 +117,7 @@ PS C:\> Stop-NetEventSession -Name Session1
 PS C:\> Remove-NetEventSession -Name session1 
 ```
 
-We have captured the internal traffic and some of the NBL packets which was used for communication. Let’s check the data which gets captured in ETL file.
+We have captured the internal traffic and some of the NBL packets which is used for communication. Let’s check the data which gets captured in ETL file.
 
 + Load and display the ETL file content.
 
@@ -170,7 +170,7 @@ b.	Scope
 
 We’ll take down one by one and learn more about them.
 
-+ NAT (Network Address Translation): This is a default network. When a container spin using “Docker run” command without (--network) argument then it will attach to the NAT network. NAT is a single host network which means container on the same network and on the same host interact, internally. The NAT network is connected to internal hyper-v switch, underlying. 
++ NAT (Network Address Translation): This is a default network. When a container spin using “Docker run” command without (--network) argument then it will attach to the NAT network. NAT is a single host network which means container on the same network, on the same host interact internally. The NAT network is connect to internal hyper-v switch, underlying. 
 
 ![WinNAT Working]({{ site.baseurl }}/assets/images/03_Network_Com_Sketch.png "WinNAT Working")
 
@@ -195,7 +195,6 @@ Spin up two containers attached to the new nat network and assigned the name for
 Command
 Docker run -dt –network try-nat –name wcow1 microsoft\windowservercore ping bing.com -t
 ```
-![Docker Network Adapters]({{ site.baseurl }}/assets/images/03_docker_network_adapter.png "Docker Network Adapters")
 
 Now, let’s check the containers are part of a nat network or not.
 ```
@@ -205,7 +204,7 @@ Docker network inspect try-nat
 ![Docker Network Inspect]({{ site.baseurl }}/assets/images/03_docker_network_inspect.png "Docker Network Inspect")
 
 
-Both the containers are attached to the nat network and assigned the unique MAC address, IP address which is required for communication between the two of them.
+Both the containers are attached to the nat network and assigned the unique MAC address, IP address.  Required for communication between two of them.
 
 Let’s get inside in one of the containers and check the connectivity between both. Use “Docker exec” command to achieve the same. 
 ```
@@ -216,12 +215,8 @@ Docker exec  -it wcow1 cmd
  
 
 CTRL P, CTRL Q to exit from the container.
-Excellent, both containers on the same network is able to communicate. The running containers  are host withing no service, therefore, (-p) argument was not used as no service is exposed outside.
+
+Excellent, both containers are on the same network and able to communicate with each other. The running containers are hosting no service, therefore, (-p) argument was not used as no service is getting exposed.
 
 ## Summary 
-This is a first series of networking. In this post, we covered how containers communicate with each other and the wasy to capture the internal traffic by using NDIS provider. We also covered the arcitecture of the docker and how it intract with lower level system components i.e. kernel and cgroups. Started with NAT driver and perform creation of container attach with NAt and other tasks.
-
-
-
-
-
+This article is the first part of the networking series. In this post, we covered how containers communicate with each other and the way to capture the internal traffic by using NDIS provider. We also covered the architecture of the docker and how it interacts with lower level system components, i.e., kernel and cgroups. Started with NAT driver and perform creation of container attach with NAT and other tasks.
