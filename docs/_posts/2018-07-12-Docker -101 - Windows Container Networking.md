@@ -10,7 +10,7 @@ image: docker-microsoft.jpg
 
 Links to the previous posts:
 
-> * [Starting with Docker on windows.](https://rahul24.github.io/Tech-O-articles/docker/2018/07/02/Docker-101-Starting-with-docker-on-windows.html)
+> * [Part 1: Starting with Docker on windows.](https://rahul24.github.io/Tech-O-articles/docker/2018/07/02/Docker-101-Starting-with-docker-on-windows.html)
 > * [Part 2: Build and run the container.](https://rahul24.github.io/Tech-O-articles/docker/2018/07/05/Docker-101-Build-and-run-the-container.html)
 
 
