@@ -8,7 +8,13 @@ image: docker-microsoft.jpg
 
 ## Part 3.1: Windows Container (WCOW) Networking.
 
-This is a first part of the networking series more would come out soon. Networking is a vast topic, so will touch upon the topics which are necessary for the containers. The communication is an important channel, and it’s a crux for any system. Effective communication is a base for any robust system. Therefore, containers hugely depend on the network for communication. We’ll cover the networking concepts applicable to windows. Microsoft is pushing lots of improvements in the network stack to increase the compatibility with docker, but still, it has a lot to achieve. Microsoft has launched two channels through which they’re pushing the improvement out for experimentation. You can read about more from - https://docs.microsoft.com/en-us/windows-server/get-started/get-started-with-1803 
+Links to the previous posts:
+
+> * [Starting with Docker on windows.](https://rahul24.github.io/Tech-O-articles/docker/2018/07/02/Docker-101-Starting-with-docker-on-windows.html)
+> * [Part 2: Build and run the container.](https://rahul24.github.io/Tech-O-articles/docker/2018/07/05/Docker-101-Build-and-run-the-container.html)
+
+
+This is a first part of the networking series more would come out soon. Networking is a vast topic, so will touch upon the topics which are necessary for the containers. The communication is an important channel, and it’s a crux for any system. Effective communication is a base for any robust system. Therefore, containers hugely depend on the network for communication. We’ll cover the networking concepts applicable to windows. Microsoft is pushing lots of improvements in the network stack to increase the compatibility with docker, but still, it has a lot to achieve. Microsoft has launched two channels through which they’re pushing the improvement out for experimentation. You can read more about same from [here](https://docs.microsoft.com/en-us/windows-server/get-started/get-started-with-1803).  
 
 Currently, they’ve launched two versions of window server 1709 and 1803 which has improved, i.e. support for ingress routing for a swarm (will write more in upcoming posts).
 excerpt
