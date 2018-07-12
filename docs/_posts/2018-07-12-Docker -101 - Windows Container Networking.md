@@ -162,8 +162,8 @@ Docker network ls
 ```
 
 Two important things come under the network:
-a.	Drivers
-b.	Scope
++ Drivers
++ Scope
 
 
 ### Drivers:
