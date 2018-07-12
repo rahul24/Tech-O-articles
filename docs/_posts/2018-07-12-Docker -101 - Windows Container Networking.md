@@ -120,6 +120,7 @@ PS C:\> Remove-NetEventSession -Name session1
 We have captured the internal traffic and some of the NBL packets which was used for communication. Let’s check the data which gets captured in ETL file.
 
 + Load and display the ETL file content.
+
 ```
 PS c:\> $log = Get-WinEvent -Path <ETL file path> -Oldest
 
