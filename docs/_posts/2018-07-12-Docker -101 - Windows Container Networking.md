@@ -21,7 +21,7 @@ excerpt
 <!--more-->
 out-of-excerpt
 
-The question which I get mostly in discussions is:
+The question which I get most in discussions is:
 
 ### How the docker works on windows?
 In Windows, Docker CLI uses docker engine rest API to perform the tasks, i.e., creating a new container/network. Docker engine internally calls containerd and runc component of docker to do the low-level tasks which require interaction with the kernel, Cgroups. In Linux, this interaction is direct from containerd to kernel and cgroups, but this has been abstract out on windows. Since the window is new in this game, therefore, frequent changes are required to stabilize and increase the compatibility with docker. The windows team added a layer of abstraction (Service) on top of low-level components, i.e., kernel, cgroups. This service is called HCS (Host Compute Service) and HNS (Host Network Service) which do all the low-level work.
