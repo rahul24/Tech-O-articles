@@ -20,10 +20,11 @@ Currently, they’ve launched two versions of window server 1709 and 1803 which 
 excerpt
 <!--more-->
 out-of-excerpt
+
 The most basic question which I always got in discussions is:
 
 ### How the docker works on windows?
-In Windows, Docker CLI uses docker engine rest api to perform the tasks ,i.e. creating a new container/network. Docker engine internally calls containerd and runc component of docker to do the low level tasks which require interaction with Kernal, Cgroups. In linux, this intraction is direct from containerd to kernel and cgroups but this has been abstract out on windows. Since, window is new in this game and frequent changes are required to stabalize and increases the compatability with docker. Therefore,windows team, added a layer of abstraction (Service) on top of low level compeoents ,i.e. kernal, cgroups. This service is calles HCS (Host Compute Service) and HNS (Host Network Service) which do all the low level work.
+In Windows, Docker CLI uses docker engine rest api to perform the tasks ,i.e. creating a new container/network. Docker engine internally calls containerd and runc component of docker to do the low level tasks which require interaction with kernel, Cgroups. In linux, this intraction is direct from containerd to kernel and cgroups but this has been abstract out on windows. Since, window is new in this game and frequent changes are required to stabalize and increases the compatability with docker. Therefore,windows team, added a layer of abstraction (Service) on top of low level compeoents ,i.e. kernel, cgroups. This service is calles HCS (Host Compute Service) and HNS (Host Network Service) which do all the low level work.
 
 ![Window Arch - source: microsoft.com]({{ site.baseurl }}/assets/images/03_Windows-Arch2.png "Window Arch - source: microsoft.com")
 
@@ -50,7 +51,7 @@ Get-VMSwitch
 ```
 ![VM Switch]({{ site.baseurl }}/assets/images/03_docker_network_vmswitch.png "VM Switch")
 
-Check all the compartments gets created with containers for traffic siolation and security:
+Check all the compartments gets created with containers for traffic isolation and security:
 ```
 Command
 Ipconfig /allcompartments
@@ -59,8 +60,8 @@ Ipconfig /allcompartments
 The data is transferred within windows in a form of particular packets called NBL (Net Buffer List). The NBL packets are transferred by containers which get routed and received by another container NIC. The virtual network uses NBL packets to transfer the data internally which gets routed via a switch. To capture the container traffic (NBL packets) then follow the steps:
 
 
-+ Create a new session.
-Capture a session in ETL file and assiging dynamic name to the file.
++ Create a new session to capture the container traffic.
+Capture a session in ETL file and assiging the dynamic name to the file.
 
 ```
 PS C:\> $timestamp = Get-Date -f yyyy-MM-dd_HH-mm-ss
@@ -71,7 +72,7 @@ Output
 ```
 Name               : Session1
 CaptureMode        : SaveToFile
-LocalFilePath      : c:\W10LAB-netcap-2017-04-26_19-45-17.etl
+LocalFilePath      : c:\<name of the file>.etl
 MaxFileSize        : 512 MB
 TraceBufferSize    : 0 KB
 MaxNumberOfBuffers : 0
@@ -82,7 +83,6 @@ SessionStatus      : NotRunning
 Use "Microsoft-Windows-NDIS-PacketCapture" or Add-NetEventpacketCaptureProvider:
 ```
 PS C:\> Add-NetEventPacketCaptureProvider -SessionName Session1
-Starting a Network Capture Session
 ```
 
 + Start a new Session to capture the traffic.
@@ -90,8 +90,8 @@ Starting a Network Capture Session
 PS C:\> Start-NetEventSession -Name Session1
 ```
 
-Check the status of the capture
-Ensure the capture is running the command below and check the last output line named SessionStatus:
++ Check the status of the capture.
+Ensure the capture is running and check the last output line named SessionStatus:
 ```
 PS C:\> Get-NetEventSession
 ```
@@ -100,7 +100,7 @@ Output
 ```
 Name              : Session1
 CaptureMode       : SaveToFile
-LocalFilePath     : c:\W10LAB-netcap-2017-04-26_19-45-17.etl
+LocalFilePath     : c:\<name of the file>.etl
 MaxFileSize       : 512 MB
 TraceBufferSize    : 64 KB
 MaxNumberOfBuffers : 30
@@ -218,7 +218,7 @@ CTRL P, CTRL Q to exit from the container.
 Excellent, both containers on the same network is able to communicate. The running containers  are host withing no service, therefore, (-p) argument was not used as no service is exposed outside.
 
 ## Summary 
-This is a first series of networking. In this post, we covered how containers communicate with each other and the wasy to capture the internal traffic by using NDIS provider. We also covered the arcitecture of the docker and how it intract with lower level system components i.e. kernal and cgroups. Started with NAT driver and perform creation of container attach with NAt and other tasks.
+This is a first series of networking. In this post, we covered how containers communicate with each other and the wasy to capture the internal traffic by using NDIS provider. We also covered the arcitecture of the docker and how it intract with lower level system components i.e. kernel and cgroups. Started with NAT driver and perform creation of container attach with NAt and other tasks.
 
 
 
