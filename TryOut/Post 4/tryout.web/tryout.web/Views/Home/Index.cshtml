@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Notifications";
+}
+
+<div class="container">
+    <div class="row">&nbsp;</div>
+    <div class="row">
+        <div class="col-12">
+            <hr />
+        </div>
+    </div>
+    <div class="row" id="tbrow">
+        <div class="col-6">&nbsp;</div>
+        <div class="alert alert-success">
+            <strong>Notification: </strong> <span id="messagesList"></span>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="~/lib/signalr/signalr.js"></script>
+<script src="~/js/Notify.js"></script>

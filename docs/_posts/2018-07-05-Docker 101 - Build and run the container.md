@@ -7,7 +7,7 @@ image: docker-microsoft.jpg
 ---
 
 
-## Part 2: Build and run the container
+## Part 2: Build and run the container.
 In my [previous post](https://rahul24.github.io/Tech-O-articles/docker/2018/07/02/Docker-101-Starting-with-docker-on-windows.html), we learned basics of the docker and some of the useful commands that we would be using throughout the series. In a continuation of my [last post](https://rahul24.github.io/Tech-O-articles/docker/2018/07/02/Docker-101-Starting-with-docker-on-windows.html), we’ll cover the below topics:
 
 *	Build your first docker image
