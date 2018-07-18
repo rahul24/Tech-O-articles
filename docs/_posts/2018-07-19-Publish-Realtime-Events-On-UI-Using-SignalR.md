@@ -9,6 +9,9 @@ image: docker-microsoft.jpg
 ## Real-time UI notification using SignalR from EventGrid processed by Microservices.
 
 Microservices are everywhere; companies are adopting big time some of them are failing because of the complexity it comes with it. The microservices is not just splitting your monolith into a variety of services. Microservices are built with careful thinking and defining the meaningful boundaries. The pain point which comes with microservices is how to maintain consistency because of its distributed architecture? The events are helpful to track down the state/action performed on the object and even replay later if required. The eventual consistency is achievable through the use of events. EventGrid is an offering from Azure which is a good fit and would leverage to showcase. Another important point – how to notify the user real-time - what is going on with the request?  For this, we would be using SignalR to publish the events for the user in real time.
+excerpt
+<!--more-->
+out-of-excerpt
 
 Pre-requisite:
 
