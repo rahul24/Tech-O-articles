@@ -1,0 +1,97 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2014-04-01-preview/deploymentTemplate.json",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "defaultValue": "SouthCentralUS",
+      "type": "String",
+      "metadata": {
+        "description": "Location of the resources."
+      }
+    },
+    "registryPassword": {
+      "defaultValue": "",
+      "type": "String"
+    }
+  },
+  "resources": [
+    {
+      "apiVersion": "2018-07-01-preview",
+      "name": "TryOut.Mesh",
+      "type": "Microsoft.ServiceFabricMesh/applications",
+      "location": "[parameters('location')]",
+      "dependsOn": [
+        "Microsoft.ServiceFabricMesh/networks/TryOut.MeshNetwork"
+      ],
+      "properties": {
+        "services": [
+          {
+            "name": "Service1",
+            "properties": {
+              "description": "Service1 description.",
+              "osType": "Windows",
+              "codePackages": [
+                {
+                  "name": "Service1",
+                  "image": "testazcontainer.azurecr.io/service1:20180723203330",
+                  "endpoints": [
+                    {
+                      "name": "Service1Listener",
+                      "port": 20003
+                    }
+                  ],
+                  "environmentVariables": [
+                    {
+                      "name": "ASPNETCORE_URLS",
+                      "value": "http://+:20003"
+                    }
+                  ],
+                  "resources": {
+                    "requests": {
+                      "cpu": 0.5,
+                      "memoryInGB": 1.0
+                    }
+                  },
+                  "imageRegistryCredential": {
+                    "server": "testazcontainer.azurecr.io",
+                    "username": "testazcontainer",
+                    "password": "[parameters('registryPassword')]"
+                  }
+                }
+              ],
+              "replicaCount": 1,
+              "networkRefs": [
+                {
+                  "name": "[resourceId('Microsoft.ServiceFabricMesh/networks', 'TryOut.MeshNetwork')]"
+                }
+              ]
+            }
+          }
+        ],
+        "description": "TryOut.Mesh description."
+      }
+    },
+    {
+      "apiVersion": "2018-07-01-preview",
+      "name": "TryOut.MeshNetwork",
+      "type": "Microsoft.ServiceFabricMesh/networks",
+      "location": "[parameters('location')]",
+      "dependsOn": [],
+      "properties": {
+        "description": "TryOut.MeshNetwork description.",
+        "addressPrefix": "10.0.0.4/22",
+        "ingressConfig": {
+          "layer4": [
+            {
+              "name": "WebAppIngress",
+              "publicPort": "80",
+              "applicationName": "TryOut.Mesh",
+              "serviceName": "Service1",
+              "endpointName": "Service1Listener"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
