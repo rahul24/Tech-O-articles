@@ -8,7 +8,7 @@ image: docker-microsoft.jpg
 
 ## Exploring Azure Service Fabric Mesh 
 
-Orchestrator is an important piece which ties all the parts together. It takes care of pain of the manageability of the distributed system. The adoption of the microservices is trending up and this comes with pain to manage all the components smartly. There are some of the production tested orchestrator which takes care of pain of managing the things.
+Orchestrator is an important piece which ties all the parts together. It takes care of pain of the manageability of the distributed system. The adoption of the microservices is trending up and this comes with pain to manage all the components smartly. There are some of the production tested orchestrator which help in managing the things.
 
 + Service Fabric (Microsoft long trusted product. Complex to set up and no support for ingress)
 + Service fabric Mesh (New – in public preview. No setup is required and support for ingress)
