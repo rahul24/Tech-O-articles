@@ -10,13 +10,15 @@ image: docker-microsoft.jpg
 
 Orchestrator is an important piece which ties all the parts together. It takes care of pain of the manageability of the distributed system. The adoption of the microservices is trending up and this comes with pain to manage all the components smartly. There are some of the production tested orchestrator which help in managing the things.
 
-+ Service Fabric (Microsoft long trusted product. Complex to set up and no support for ingress)
++ Service Fabric (Microsoft long trusted product. Complex to set up but has lot of features. No support for ingress)
 + Service fabric Mesh (New – in public preview. No setup is required and support for ingress)
-+ Swarm (Docker Orchestrator – Sample to setup)
-+ kubernetes (Google open source orchestrator – Complex to setup but lots of features)
++ Swarm (Docker Orchestrator – Simple to setup)
++ kubernetes (Google open source orchestrator – Complex to setup but has lot of features)
+
 excerpt
 <!--more-->
 out-of-excerpt
+
 In this post, we would be talking about a new offering from Microsoft – Service fabric Mesh (In Preview). The base product underlying is “Service fabric” only, but the main of managing the platform is taken out and going to manage by Azure. Let’s discuss the problem which requires to handle:
 
 > * Manage the networking (Big one)
