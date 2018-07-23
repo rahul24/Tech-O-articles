@@ -44,7 +44,7 @@ az extension add --source https://sfmeshcli.blob.core.windows.net/cli/mesh-0.8.1
 * Please take care of the pre-requisite mentioned above.
 
 * Created a mesh project with one frontend and backend service.
-
+![VS Project Explorer]({{ site.baseurl }}/assets/images/05_mesh_vs_explorer.png "VS Project Explorer")
  
 
 Let’s explore:
@@ -65,11 +65,13 @@ If you expand any of the projects will find three important things:
 + Docker file (Multistage) 
 
 By adding the same files in your existing core project, you can port the project in the mesh.
+![VS Project Explorer]({{ site.baseurl }}/assets/images/05_mesh_vs_project_explorer.png "VS Project Explorer")
 
 Now, let’s publish the applications to the mesh and explore through azure CLI.
 
 Right click on mesh project and publish to the azure. Simple and effective. On Azure portal, you will not find VM, Load balancer, network because all are abstracted out from the user. Fully managed by the Azure team.
- 
+![Mesh Resource Group]({{ site.baseurl }}/assets/images/05_mesh_azure_rg.png "Mesh Resource Group")
+
 Now, how to check the underlying components and information about same. For same, we would be using the Azure CLI and with mesh extension.
 
 Clean up the existing mesh extension if you’ve installed.
@@ -89,7 +91,7 @@ Check the deployed app
 Command
 az mesh app list --output table
 ```
- 
+![Mesh Azure CLI Output]({{ site.baseurl }}/assets/images/05_mesh_app_azure_cli.png "Mesh Azure CLI Output")
 
 The output of the mesh project is a JSON file which gets created after merging all the YAML files, i.e. network, service, app. This JSON file is used to deploy the services in mesh resources. 
 https://raw.githubusercontent.com/rahul24/Tech-O-articles/tree/master/TryOut/Post%205/merged-arm_rp.json
@@ -103,11 +105,12 @@ az mesh deployment create --resource-group myResourceGroup --template-uri https:
 
 To access the deployed service, you need to get the public which is a gateway to connect with your service.
 ```
-Command
+Command 
 az mesh network show --resource-group myresourcegroup --name TryOut.MeshNetwork
 ```
+![Mesh Network Azure CLI Output]({{ site.baseurl }}/assets/images/05_mesh_network_azure_cli.png "Mesh Network Azure CLI Output")
 
-Lift and Shift:
+#### Lift and Shift:
 
 If you have existing dockerized core application, then it can easily be deployed within mesh via template mode.
 ```
@@ -129,7 +132,8 @@ The second section of JSON has details of the application which is getting deplo
 In the last section, the detail of the ingress network which we defined in the “Network.yaml” and which endpoint exposed to the outside world.
 <script src="https://gist.github.com/rahul24/3526296dccc49304991b64eac49d1874.js"></script>
 
-Since this offering is in public preview  so faced few issues:
+
+Since this offering is in public preview so faced few issues:
 
 + Deployment takes sometime forever. I guess depending on the load at that period. Not able to trace the cause of the problem through logs as well.
 
