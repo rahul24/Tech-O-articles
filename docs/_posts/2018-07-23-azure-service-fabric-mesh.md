@@ -14,7 +14,9 @@ Orchestrator is an important piece which ties all the parts together. It takes c
 + Service fabric Mesh (New – in public preview. No setup is required and support for ingress)
 + Swarm (Docker Orchestrator – Sample to setup)
 + kubernetes (Google open source orchestrator – Complex to setup but lots of features)
-
+excerpt
+<!--more-->
+out-of-excerpt
 In this post, we would be talking about a new offering from Microsoft – Service fabric Mesh (In Preview). The base product underlying is “Service fabric” only, but the main of managing the platform is taken out and going to manage by Azure. Let’s discuss the problem which requires to handle:
 
 > * Manage the networking (Big one)
