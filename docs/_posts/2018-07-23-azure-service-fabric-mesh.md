@@ -153,4 +153,4 @@ Above command will clean up the system and free up space.
 
 
 ### Summary:
-Service Mesh is a solves the user's problem by abstracting out the underlying platform details and pain of managing the network. Everything is good but still sometimes need to check the underlying setup in detail level, therefore, should able to get such detail. 
+Service Mesh solves the user's problem by abstracting out the underlying platform details and pain of managing the network. Everything is good but still sometimes need of checking the underlying setup in detail level, therefore, should able to get such detail via. Mesh API. 
