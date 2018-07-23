@@ -33,7 +33,7 @@
               "codePackages": [
                 {
                   "name": "Service1",
-                  "image": "testazcontainer.azurecr.io/service1:20180723203330",
+                  "image": "<register name>/service1",
                   "endpoints": [
                     {
                       "name": "Service1Listener",
@@ -53,8 +53,8 @@
                     }
                   },
                   "imageRegistryCredential": {
-                    "server": "testazcontainer.azurecr.io",
-                    "username": "testazcontainer",
+                    "server": "<register name>",
+                    "username": "<user name>",
                     "password": "[parameters('registryPassword')]"
                   }
                 }
